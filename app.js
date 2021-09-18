@@ -8,15 +8,20 @@ function getTranslationURL(text) {
 	return serverURL + '?' + 'text=' + text;
 }
 
+function errorHandler(error) {
+	console.log('Error occured', error);
+	alert('Something went wrong! try again after some time.');
+}
+
 function handleClick() {
 	var inputText = txtInput.value;
 	fetch(getTranslationURL(inputText))
 		.then((response) => response.json())
-		.then((response) => {
-			console.log(response);
-			outputDiv.innerText = response.contents.translated;
+		.then((json) => {
+			var translatedText = json.contents.translated;
+			outputDiv.innerText = translatedText;
 		})
-		.catch((error) => console.log(error));
+		.catch(errorHandler);
 }
 
 btnTranslate.addEventListener('click', handleClick);
