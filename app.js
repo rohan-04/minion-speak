@@ -11,10 +11,9 @@ function getTranslationURL(text) {
 function handleClick() {
 	var inputText = txtInput.value;
 	fetch(getTranslationURL(inputText))
+		.then((response) => response.json())
 		.then((response) => {
-			response.json();
-		})
-		.then((response) => {
+			console.log(response);
 			outputDiv.innerText = response.contents.translated;
 		})
 		.catch((error) => console.log(error));
