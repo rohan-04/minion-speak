@@ -14,6 +14,10 @@
 	color: var(--text-color);
 }
 
+body {
+	font-size: 1rem;
+}
+
 nav h1 {
 	background-color: var(--primary-color);
 	font-size: 3rem;
