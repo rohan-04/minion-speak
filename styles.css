@@ -1,15 +1,81 @@
-textarea {
-	width: 80%;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+:root {
+	--primary-color: #fbbf24;
+	--secondary-color: #1d4ed8;
+	--text-color: #4b5563;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0rem;
+	padding: 0rem;
+	font-family: 'Nunito', sans-serif;
+	color: var(--text-color);
+}
+
+nav h1 {
+	background-color: var(--primary-color);
+	font-size: 3rem;
+	text-align: center;
+	padding: 1rem;
+}
+
+nav {
+	margin-bottom: 2rem;
+}
+
+.container {
+	margin: auto;
+	max-width: 70%;
+}
+
+#txt-input {
+	width: 100%;
 	height: 100px;
 	display: block;
 	padding: 1rem;
-	margin: 1rem;
+}
+
+button {
+	padding: 0.5rem 1rem;
+	margin: 1.5rem 0rem;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	border: none;
+	border-radius: 1rem;
+	font-size: large;
+	font-weight: bold;
+}
+
+.output {
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--secondary-color);
+	margin-bottom: 0.5rem;
 }
 
 #output {
 	border: 1px solid black;
-	width: 80%;
+	width: 100%;
 	height: 100px;
 	padding: 1rem;
-	margin: 1rem;
+}
+
+footer {
+	background-color: var(--primary-color);
+	text-align: center;
+	padding: 2rem;
+	margin-top: 2rem;
+}
+
+footer div {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+footer p {
+	max-width: 60%;
+	text-align: center;
+	margin: auto;
 }
